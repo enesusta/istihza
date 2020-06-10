@@ -1,34 +1,30 @@
 package com.github.enesusta.mockrest.human;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.github.enesusta.mockrest.converter.Converter;
-import com.github.enesusta.mockrest.human.Human;
-import com.github.enesusta.mockrest.resource.JsonResource;
+import com.github.enesusta.mockrest.human.exception.HumanNotFoundException;
+import com.github.enesusta.mockrest.human.service.HumanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/humans")
 public class HumanController {
 
     @Autowired
-    Converter<Human> humanConverter;
-
-    @Autowired
-    JsonResource resource;
+    HumanService humanService;
 
     @GetMapping
-    public String hello() {
-        return "hello";
+    public List<Human> getAll(@RequestParam int id) throws HumanNotFoundException {
+        return humanService.getAll();
     }
 
-    @GetMapping("/human")
-    public List<Human> humans() throws JsonProcessingException {
-        return humanConverter.convert(resource.getJsonResource(), Human.class);
+    @GetMapping
+    public List<Human> findByName(@RequestParam String name) {
+        return humanService.findByName(name);
     }
 
 }
