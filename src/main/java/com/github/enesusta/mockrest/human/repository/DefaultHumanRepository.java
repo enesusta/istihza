@@ -48,7 +48,7 @@ public class DefaultHumanRepository implements HumanRepository {
         final Consumer<Human> humanConsumer = listOfMatchedNameOfParameter::add;
 
         getAll().ifPresent(opt -> {
-            opt.stream().filter(humanPredicate).forEach(humanConsumer);
+            opt.parallelStream().filter(humanPredicate).forEach(humanConsumer);
         });
 
         return listOfMatchedNameOfParameter;
