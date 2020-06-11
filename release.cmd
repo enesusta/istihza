@@ -1,0 +1,1 @@
+call zip istihza-windows-amd64.zip target/istihza-1.0.3-runner.exe

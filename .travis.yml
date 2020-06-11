@@ -13,10 +13,22 @@ cache:
     - $HOME/.m2
 
 branches:
+  except:
+    - develop
+    - /^feature/\d+\.\d+$/
   only:
     - master
 
 install: true
 
 script:
-  - mvn clean test -DrepoToken=$COVERAL_REPO_TOKEN jacoco:report coveralls:report
+  - mvn clean test -DrepoToken=$COVERALLS_TOKEN jacoco:report coveralls:report
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_KEY
+  file: istihza-windows-amd64.zip
+  skip_cleanup: true
+  on:
+    tags: true
+
