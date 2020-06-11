@@ -1,5 +1,7 @@
 # mock-rest project
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/39c862e0db924f94a43aec758c2068bb)](https://app.codacy.com/manual/enesusta/mock-rest?utm_source=github.com&utm_medium=referral&utm_content=enesusta/mock-rest&utm_campaign=Badge_Grade_Dashboard)
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
