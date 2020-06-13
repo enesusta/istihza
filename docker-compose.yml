@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  native:
+    container_name: istihza
+    image: enesusta/istihza:0.1
+    ports:
+      - 7070:8080
+    mem_limit: 32M

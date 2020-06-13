@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/enesusta/istihza.svg?branch=master)](https://travis-ci.com/enesusta/istihza)
 [![Coverage Status](https://coveralls.io/repos/github/enesusta/istihza/badge.svg)](https://coveralls.io/github/enesusta/istihza)
-[![javadoc](https://img.shields.io/badge/javadoc-1.0.3-green)](https://github.com/enesusta/mock-rest/tree/master/docs)
+[![javadoc](https://img.shields.io/badge/javadoc-1.0.3-green)](http://www.enesusta.tech/istihza/index.html)
 
 </div>
 
