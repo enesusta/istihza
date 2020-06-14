@@ -2,6 +2,9 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal:8.1
 
 MAINTAINER Enes Usta <enesusta@email.com>
 
+ARG SERVICE_NAME=defaultService
+ENV SERVICE_NAME $SERVICE_NAME
+
 WORKDIR /work/
 
 COPY --chown=1001:root target/*-runner /work/application
